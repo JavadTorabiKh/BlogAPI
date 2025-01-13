@@ -28,8 +28,8 @@ To set up this project, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/personal-blog.git
-   cd personal-blog
+   git clone https://github.com/JavadTorabiKh/blogAPI.git
+   cd blogAPI
 
 2. Install dependencies:
 
