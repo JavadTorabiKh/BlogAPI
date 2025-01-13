@@ -44,7 +44,6 @@ To set up this project, follow these steps:
     ```bash
     python manage.py runserver
 
-
 Now, you can visit http://127.0.0.1:8000/ to view your blog!
 
 Contact Me
