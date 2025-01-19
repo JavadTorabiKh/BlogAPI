@@ -52,4 +52,4 @@ If you have any questions or want to get in touch, you can reach me through:
 Email: j.2528840@gmail.com
 Twitter: @javad_torabi
 
-Feel free to customize any part of it to better fit your style or preferences!
+
