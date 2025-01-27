@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "allauth",
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,7 +43,6 @@ INSTALLED_APPS = [
     # 3rd-party-app ------------------------
     "rest_framework",
     "rest_framework.authtoken",
-    "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "rest_auth",
