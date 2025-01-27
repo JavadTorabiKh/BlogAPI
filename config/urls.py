@@ -1,5 +1,5 @@
 """
-URL configuration for blog_project project.
+URL configuration for config project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,17 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from rest_framework.schemas import get_schema_view
-from rest_framework.documentation import include_docs_urls
+from django.urls import path
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/v1/", include("posts.urls")),
-    path("api-auth/", include("rest_framework.urls")),
-    path("api/v1/rest-auth/", include("rest_auth.urls")),
-    path("api/v1/rest-auth/registration/", include("rest_auth.registration.urls")),
-    path("schema/", get_schema_view(title="Blog API", version="1.0.0")),
-    path("docs/", include_docs_urls(title="Blog API")),
-    
+    path('admin/', admin.site.urls),
 ]
