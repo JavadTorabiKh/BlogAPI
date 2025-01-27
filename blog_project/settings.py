@@ -58,6 +58,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = "blog_project.urls"
@@ -148,4 +150,3 @@ REST_FRAMEWORK = {
 SITE_ID = 1
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
