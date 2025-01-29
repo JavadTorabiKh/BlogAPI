@@ -18,8 +18,6 @@ The project utilizes the following technologies:
 
 - **Django**: A popular web framework for rapid development.
 - **HTML/CSS**: For webpage design and formatting.
-- **JavaScript**: For dynamic interactions on the website.
-- **SQLite**: Default database for storing information.
 
 ## Installation and Setup
 
@@ -30,21 +28,21 @@ To set up this project, follow these steps:
    ```bash
    git clone https://github.com/JavadTorabiKh/blogAPI.git
    cd blogAPI
+   ```
 
 2. Install dependencies:
 
     ```bash
     pip install -r requirements.txt
+    ```
 
-3. Run migrations:
-    ```bash
-    python manage.py migrate
 
-4. Start the server:
+3. Start the server:
     ```bash
     python manage.py runserver
+    ```
 
-Now, you can visit http://127.0.0.1:5000/ to view your blog!
+Now, you can visit http://127.0.0.1:8000/ to view your blog!
 
 Contact Me
 If you have any questions or want to get in touch, you can reach me through:
