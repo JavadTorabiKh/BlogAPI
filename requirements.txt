@@ -1,7 +1,5 @@
-asgiref==3.8.1  
-backports.zoneinfo==0.2.1  
-Django==4.2.18 
-pkg-resources==0.0.0  
-setuptools==44.0.0 
+asgiref==3.8.1
+django==4.2.18
+setuptools==44.0.0
 sqlparse==0.5.3  
 typing-extensions==4.12.2 
