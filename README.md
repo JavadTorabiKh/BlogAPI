@@ -47,7 +47,7 @@ Now, you can visit http://127.0.0.1:5000/ to view your blog!
 Contact Me
 If you have any questions or want to get in touch, you can reach me through:
 
-Email: j.2528840@gmail.com
+Email: javadtorabi462@gmail.com
 
 Twitter: @javad_torabi
 
