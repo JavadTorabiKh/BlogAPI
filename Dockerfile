@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-# set env
+# set .env
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
