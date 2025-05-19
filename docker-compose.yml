@@ -1,26 +1,44 @@
-version: '2.3'
+version: '3.8'
 
 services:
   web:
     build: .
-    command: gunicorn --bind 0.0.0.0:8000 blog.wsgi:application
-    volumes:
-      - .:/app
+    container_name: django_app
+    restart: unless-stopped
     ports:
       - "8000:8000"
+    volumes:
+      - .:/app
+      - static_volume:/app/static
+      - media_volume:/app/media
     env_file:
       - .env
     depends_on:
       - db
+      - redis
 
   db:
     image: postgres:13
+    container_name: postgres_db
+    restart: unless-stopped
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_DB=blog_db
-      - POSTGRES_USER=blog_user
-      - POSTGRES_PASSWORD=blog_password
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+
+  redis:
+    image: redis:6
+    container_name: redis_cache
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
 
 volumes:
   postgres_data:
+  redis_data:
+  static_volume:
+  media_volume:
