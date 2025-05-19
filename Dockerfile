@@ -1,25 +1,26 @@
-FROM python:3.8-slim
+FROM python:3.9.21-slim-bullseye
 
-# set .env
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PIP_DISABLE_PIP_VERSION_CHECK 1
 
-# install dependency
 RUN apt-get update && apt-get install -y \
     gcc \
+    python3-dev \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# copy requirements
 WORKDIR /app
+
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
 COPY . .
 
-# migrations
 RUN python manage.py migrate
-RUN python manage.py collectstatic --noinput
 
-# run server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "blog.wsgi:application"]
+EXPOSE 8000
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "your_project.wsgi:application"]
