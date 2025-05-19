@@ -5,7 +5,6 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-# نصب وابستگی‌های سیستم برای SQLite
 RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
